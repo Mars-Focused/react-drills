@@ -35,7 +35,7 @@ class Login extends Component {
                 onChange={e => this.handlePasswordChange(e.target.value)}
                 type='text'
                 />
-                <button onClick={this.HandleLogin}>Login</button>
+                <button onClick={this.handleLogin}>Login</button>
             </div>
         )
     }
