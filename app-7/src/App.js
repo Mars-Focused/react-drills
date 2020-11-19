@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import '/App.css'
+import './App.css'
 import NewTask from "./NewTask"
-import List from ".List"
+import List from "./List"
 
 class App extends Component {
   constructor(){
@@ -15,14 +15,14 @@ class App extends Component {
   }
 
   handleAddTask(task){
-    this.steState({ list: [...this.state.list, task] })
+    this.setState({ list: [...this.state.list, task] })
   }
 
   render(){
     return(
       <div>
         <h1>My to-do list:</h1>
-        <NewTask add={thislhandleAddTask} />
+        <NewTask add={this.handleAddTask} />
         <List tasks={this.state.list}/>
       </div>
     )
